@@ -83,5 +83,4 @@ public class Comment implements Serializable{
 		Comment other = (Comment) obj;
 		return Objects.equals(id, other.id);
 	}
-
 }

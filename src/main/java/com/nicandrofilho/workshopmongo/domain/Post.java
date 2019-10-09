@@ -17,8 +17,7 @@ public class Post implements Serializable{
 	private User author;
 	private Set<Comment> comments = new HashSet<>();
 	
-	public Post() {
-	}
+	public Post() {}
 
 	public Post(String id, Instant date, String title, String body, User author) {
 		super();
@@ -88,6 +87,5 @@ public class Post implements Serializable{
 			return false;
 		Post other = (Post) obj;
 		return Objects.equals(id, other.id);
-	}
-	
+	}	
 }

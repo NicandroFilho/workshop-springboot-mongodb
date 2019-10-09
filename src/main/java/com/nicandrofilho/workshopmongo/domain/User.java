@@ -19,9 +19,7 @@ public class User implements Serializable{
 	
 	private Set<Post> posts = new HashSet<>();
 
-	public User() {
-		
-	}
+	public User() {}
 
 	public User(String id, String name, String email) {
 		super();
@@ -74,5 +72,4 @@ public class User implements Serializable{
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-	
 }

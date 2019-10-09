@@ -18,7 +18,6 @@ public class UserResource {
 	@Autowired
 	private UserService service;
 	
-
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<User>> findAll(){		
 		
