@@ -1,16 +1,21 @@
 package com.nicandrofilho.workshopmongo.domain;
 
 import java.io.Serializable;
-import java.time.Instant;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Post implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
+	@Id
 	private String id;
-	private Instant date;
+	private Date date;
 	private String title;
 	private String body;
 	
@@ -19,7 +24,7 @@ public class Post implements Serializable{
 	
 	public Post() {}
 
-	public Post(String id, Instant date, String title, String body, User author) {
+	public Post(String id, Date date, String title, String body, User author) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -36,11 +41,11 @@ public class Post implements Serializable{
 		this.id = id;
 	}
 
-	public Instant getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(Instant date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
